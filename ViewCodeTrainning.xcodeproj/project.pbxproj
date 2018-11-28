@@ -32,6 +32,7 @@
 		99F7C193209096ED0007D3D7 /* Nimble.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 994EBED720909596001BACEF /* Nimble.framework.dSYM */; };
 		99F7C194209096ED0007D3D7 /* Quick.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 994EBED620909596001BACEF /* Quick.framework.dSYM */; };
 		A4D106EA21AE534E00A02926 /* ViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D106E921AE534E00A02926 /* ViewControllerScreen.swift */; };
+		A4D106EC21AE5BAA00A02926 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D106EB21AE5BAA00A02926 /* CodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		99F7C18A209096D40007D3D7 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		99F7C18B209096D50007D3D7 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
 		A4D106E921AE534E00A02926 /* ViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreen.swift; sourceTree = "<group>"; };
+		A4D106EB21AE5BAA00A02926 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				99D7ED782090935800295F3D /* LaunchScreen.storyboard */,
 				99D7ED7B2090935800295F3D /* Info.plist */,
 				A4D106E921AE534E00A02926 /* ViewControllerScreen.swift */,
+				A4D106EB21AE5BAA00A02926 /* CodeView.swift */,
 			);
 			path = ViewCodeTrainning;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				99D7ED722090935800295F3D /* ViewController.swift in Sources */,
 				A4D106EA21AE534E00A02926 /* ViewControllerScreen.swift in Sources */,
 				99D7ED702090935800295F3D /* AppDelegate.swift in Sources */,
+				A4D106EC21AE5BAA00A02926 /* CodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

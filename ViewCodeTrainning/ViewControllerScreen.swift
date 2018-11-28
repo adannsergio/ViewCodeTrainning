@@ -9,31 +9,41 @@
 import UIKit
 
 final class ViewControllerScreen: UIView {
+    
+    /// Cake recipe
+    /// Lazy because if I need to use another method inside the init closure itself
+    lazy var button: UIButton = {
+        let view = UIButton(frame: .zero)
+        view.backgroundColor = .red
+        view.setTitle("Fetch", for: .normal)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }()
+    
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
-        
-        let button = UIButton(frame: .zero)
-        button.backgroundColor = .red
-        button.setTitle("Fetch", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        
-        /// Add view
-        addSubview(button)
-        
-        /// Setup constraint
-        button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15).isActive = true
-        button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15).isActive = true
-        
-        
-        /// Misc
-        backgroundColor = .darkGray
-        
-        
+        setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension ViewControllerScreen: CodeView {
+    func buildViewHierarchy() {
+        addSubview(button)
+    }
+    
+    func setupConstraint() {
+        button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15).isActive = true
+        button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -15).isActive = true
+    }
+    
+    func setupAdditionalConfiguration() {
+        backgroundColor = .darkGray
     }
 }
