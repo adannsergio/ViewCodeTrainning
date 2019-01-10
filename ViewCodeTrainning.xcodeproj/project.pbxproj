@@ -33,6 +33,7 @@
 		99F7C194209096ED0007D3D7 /* Quick.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 994EBED620909596001BACEF /* Quick.framework.dSYM */; };
 		A4D106EA21AE534E00A02926 /* ViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D106E921AE534E00A02926 /* ViewControllerScreen.swift */; };
 		A4D106EC21AE5BAA00A02926 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D106EB21AE5BAA00A02926 /* CodeView.swift */; };
+		A4D6A87221E76E5300868FEC /* HeaderGridBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D6A87121E76E5300868FEC /* HeaderGridBoxView.swift */; };
 		A4F247D121AEFADB00BBF228 /* GridBoxViewQS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F247D021AEFADB00BBF228 /* GridBoxViewQS.swift */; };
 		A4F247D321AF85E200BBF228 /* GridBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F247D221AF85E200BBF228 /* GridBoxView.swift */; };
 		A4F247D521AF8E1800BBF228 /* ViewControllerScreenQS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F247D421AF8E1800BBF228 /* ViewControllerScreenQS.swift */; };
@@ -100,6 +101,7 @@
 		99F7C18B209096D50007D3D7 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
 		A4D106E921AE534E00A02926 /* ViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreen.swift; sourceTree = "<group>"; };
 		A4D106EB21AE5BAA00A02926 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		A4D6A87121E76E5300868FEC /* HeaderGridBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderGridBoxView.swift; sourceTree = "<group>"; };
 		A4F247D021AEFADB00BBF228 /* GridBoxViewQS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxViewQS.swift; sourceTree = "<group>"; };
 		A4F247D221AF85E200BBF228 /* GridBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxView.swift; sourceTree = "<group>"; };
 		A4F247D421AF8E1800BBF228 /* ViewControllerScreenQS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreenQS.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				A4D106E921AE534E00A02926 /* ViewControllerScreen.swift */,
 				A4D106EB21AE5BAA00A02926 /* CodeView.swift */,
 				A4F247D221AF85E200BBF228 /* GridBoxView.swift */,
+				A4D6A87121E76E5300868FEC /* HeaderGridBoxView.swift */,
 			);
 			path = ViewCodeTrainning;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				A4D106EA21AE534E00A02926 /* ViewControllerScreen.swift in Sources */,
 				99D7ED702090935800295F3D /* AppDelegate.swift in Sources */,
 				A4D106EC21AE5BAA00A02926 /* CodeView.swift in Sources */,
+				A4D6A87221E76E5300868FEC /* HeaderGridBoxView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

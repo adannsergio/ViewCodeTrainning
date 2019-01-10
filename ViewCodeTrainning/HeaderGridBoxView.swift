@@ -1,25 +1,25 @@
 //
-//  GridBoxView.swift
+//  HeaderGridBoxView.swift
 //  ViewCodeTrainning
 //
-//  Created by Adann Simões on 29/11/18.
-//  Copyright © 2018 thiago.lioy. All rights reserved.
+//  Created by Adann Simões on 10/01/19.
+//  Copyright © 2019 thiago.lioy. All rights reserved.
 //
 
 import UIKit
 
-final class GridBoxView: UIView {
+final class HeaderGridBoxView: UIView {
     
     lazy var imageView: UIImageView = {
         let view = UIImageView(frame: .zero)
-        view.backgroundColor = .green
+        view.backgroundColor = .yellow
         return view
     }()
     
     lazy var textContainer: UIStackView = {
         let view = UIStackView(frame: .zero)
         view.axis = .vertical
-        view.distribution = .fillEqually
+        view.distribution = .fillProportionally
         view.spacing = 8
         return view
     }()
@@ -32,7 +32,27 @@ final class GridBoxView: UIView {
     
     lazy var subtitle: UILabel = {
         let view = UILabel(frame: .zero)
-        view.backgroundColor = .red
+        view.backgroundColor = .green
+        return view
+    }()
+    
+    lazy var actionContainer: UIStackView = {
+        let view = UIStackView(frame: .zero)
+        view.axis = .horizontal
+        view.distribution = .fillEqually
+        view.spacing = 15
+        return view
+    }()
+    
+    var buttonLeft: UIButton = {
+        let view = UIButton(frame: .zero)
+        view.backgroundColor = .magenta
+        return view
+    }()
+    
+    var buttonRight: UIButton = {
+        let view = UIButton(frame: .zero)
+        view.backgroundColor = .cyan
         return view
     }()
     
@@ -46,24 +66,13 @@ final class GridBoxView: UIView {
     }
 }
 
-extension GridBoxView: CodeView {
+extension HeaderGridBoxView: CodeView {
     func buildViewHierarchy() {
-        addSubview(imageView)
-        textContainer.addArrangedSubview(title)
-        textContainer.addArrangedSubview(subtitle)
-        addSubview(textContainer)
+        
     }
     
     func setupConstraint() {
-        imageView.snp.makeConstraints { (make) in
-            make.left.top.right.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.7)
-        }
         
-        textContainer.snp.makeConstraints { (make) in
-            make.left.bottom.right.equalToSuperview()
-            make.top.equalTo(imageView.snp.bottom).offset(15)
-        }
     }
     
     func setupAdditionalConfiguration() {
