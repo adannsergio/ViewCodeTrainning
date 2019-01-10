@@ -33,6 +33,9 @@
 		99F7C194209096ED0007D3D7 /* Quick.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 994EBED620909596001BACEF /* Quick.framework.dSYM */; };
 		A4D106EA21AE534E00A02926 /* ViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D106E921AE534E00A02926 /* ViewControllerScreen.swift */; };
 		A4D106EC21AE5BAA00A02926 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D106EB21AE5BAA00A02926 /* CodeView.swift */; };
+		A4F247D121AEFADB00BBF228 /* GridBoxViewQS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F247D021AEFADB00BBF228 /* GridBoxViewQS.swift */; };
+		A4F247D321AF85E200BBF228 /* GridBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F247D221AF85E200BBF228 /* GridBoxView.swift */; };
+		A4F247D521AF8E1800BBF228 /* ViewControllerScreenQS.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F247D421AF8E1800BBF228 /* ViewControllerScreenQS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,9 @@
 		99F7C18B209096D50007D3D7 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble_Snapshots.framework; path = Carthage/Build/iOS/Nimble_Snapshots.framework; sourceTree = "<group>"; };
 		A4D106E921AE534E00A02926 /* ViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreen.swift; sourceTree = "<group>"; };
 		A4D106EB21AE5BAA00A02926 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		A4F247D021AEFADB00BBF228 /* GridBoxViewQS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxViewQS.swift; sourceTree = "<group>"; };
+		A4F247D221AF85E200BBF228 /* GridBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridBoxView.swift; sourceTree = "<group>"; };
+		A4F247D421AF8E1800BBF228 /* ViewControllerScreenQS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScreenQS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,7 @@
 				99D7ED7B2090935800295F3D /* Info.plist */,
 				A4D106E921AE534E00A02926 /* ViewControllerScreen.swift */,
 				A4D106EB21AE5BAA00A02926 /* CodeView.swift */,
+				A4F247D221AF85E200BBF228 /* GridBoxView.swift */,
 			);
 			path = ViewCodeTrainning;
 			sourceTree = "<group>";
@@ -188,7 +195,9 @@
 			isa = PBXGroup;
 			children = (
 				99D7ED842090935800295F3D /* ViewCodeTrainningTests.swift */,
+				A4F247D021AEFADB00BBF228 /* GridBoxViewQS.swift */,
 				99D7ED862090935800295F3D /* Info.plist */,
+				A4F247D421AF8E1800BBF228 /* ViewControllerScreenQS.swift */,
 			);
 			path = ViewCodeTrainningTests;
 			sourceTree = "<group>";
@@ -342,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F247D321AF85E200BBF228 /* GridBoxView.swift in Sources */,
 				99D7ED722090935800295F3D /* ViewController.swift in Sources */,
 				A4D106EA21AE534E00A02926 /* ViewControllerScreen.swift in Sources */,
 				99D7ED702090935800295F3D /* AppDelegate.swift in Sources */,
@@ -353,6 +363,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F247D121AEFADB00BBF228 /* GridBoxViewQS.swift in Sources */,
+				A4F247D521AF8E1800BBF228 /* ViewControllerScreenQS.swift in Sources */,
 				99D7ED852090935800295F3D /* ViewCodeTrainningTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +554,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P89J5888T8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -562,6 +575,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P89J5888T8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",

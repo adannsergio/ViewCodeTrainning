@@ -9,16 +9,27 @@
 import UIKit
 
 final class ViewControllerScreen: UIView {
-    
     /// Cake recipe
     /// Lazy because if I need to use another method inside the init closure itself
-    lazy var button: UIButton = {
+    var button: UIButton = {
         let view = UIButton(frame: .zero)
         view.backgroundColor = .red
         view.setTitle("Fetch", for: .normal)
+        view.layer.cornerRadius = 6
         //view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    private lazy var gridContainer: UIStackView = {
+        let view = UIStackView(frame: .zero)
+        view.axis = .horizontal
+        view.distribution = .fillEqually
+        view.spacing = 8
+        return view
+    }()
+    
+    let leftBox = GridBoxView()
+    let rightBox = GridBoxView()
     
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
@@ -33,6 +44,9 @@ final class ViewControllerScreen: UIView {
 extension ViewControllerScreen: CodeView {
     func buildViewHierarchy() {
         addSubview(button)
+        gridContainer.addArrangedSubview(leftBox)
+        gridContainer.addArrangedSubview(rightBox)
+        addSubview(gridContainer)
     }
     
     func setupConstraint() {
@@ -47,6 +61,14 @@ extension ViewControllerScreen: CodeView {
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(50)
             make.bottom.equalTo(self).inset(15)
+            
+        }
+        
+        gridContainer.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(20)
+            make.right.equalToSuperview().inset(20)
+            make.height.equalTo(200)
+            make.centerY.equalToSuperview()
             
         }
     }
