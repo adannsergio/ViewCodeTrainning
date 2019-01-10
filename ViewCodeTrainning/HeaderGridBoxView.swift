@@ -19,8 +19,8 @@ final class HeaderGridBoxView: UIView {
     lazy var textContainer: UIStackView = {
         let view = UIStackView(frame: .zero)
         view.axis = .vertical
-        view.distribution = .fillProportionally
-        view.spacing = 8
+        view.distribution = .fillEqually
+        view.spacing = 10
         return view
     }()
     
@@ -40,17 +40,17 @@ final class HeaderGridBoxView: UIView {
         let view = UIStackView(frame: .zero)
         view.axis = .horizontal
         view.distribution = .fillEqually
-        view.spacing = 15
+        view.spacing = 10
         return view
     }()
     
-    var buttonLeft: UIButton = {
+    var leftButton: UIButton = {
         let view = UIButton(frame: .zero)
         view.backgroundColor = .magenta
         return view
     }()
     
-    var buttonRight: UIButton = {
+    var rightButton: UIButton = {
         let view = UIButton(frame: .zero)
         view.backgroundColor = .cyan
         return view
@@ -68,11 +68,35 @@ final class HeaderGridBoxView: UIView {
 
 extension HeaderGridBoxView: CodeView {
     func buildViewHierarchy() {
+        addSubview(imageView)
         
+        textContainer.addArrangedSubview(title)
+        textContainer.addArrangedSubview(subtitle)
+        addSubview(textContainer)
+        
+        actionContainer.addArrangedSubview(leftButton)
+        actionContainer.addArrangedSubview(rightButton)
+        addSubview(actionContainer)
     }
     
     func setupConstraint() {
+        imageView.snp.makeConstraints { (make) in
+            make.left.top.bottom.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.3)
+        }
         
+        textContainer.snp.makeConstraints { (make) in
+            make.left.equalTo(imageView.snp.right).offset(10)
+            make.top.right.equalToSuperview()
+            make.height.equalToSuperview().multipliedBy(0.55)
+        }
+        
+        actionContainer.snp.makeConstraints { (make) in
+            make.left.equalTo(textContainer.snp.left)
+            make.top.equalTo(textContainer.snp.bottom).offset(10)
+            make.width.equalTo(textContainer.snp.width)
+            make.bottom.equalToSuperview()
+        }
     }
     
     func setupAdditionalConfiguration() {

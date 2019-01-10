@@ -31,6 +31,8 @@ final class ViewControllerScreen: UIView {
     let leftBox = GridBoxView()
     let rightBox = GridBoxView()
     
+    let headerBox = HeaderGridBoxView()
+    
     override init(frame: CGRect = .zero) {
         super.init(frame: frame)
         setupView()
@@ -47,9 +49,11 @@ extension ViewControllerScreen: CodeView {
         gridContainer.addArrangedSubview(leftBox)
         gridContainer.addArrangedSubview(rightBox)
         addSubview(gridContainer)
+        addSubview(headerBox)
     }
     
     func setupConstraint() {
+        // The lazy way to do constraints with view code
 //        button.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15).isActive = true
 //        button.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15).isActive = true
 //        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -57,7 +61,6 @@ extension ViewControllerScreen: CodeView {
         
         button.snp.makeConstraints { (make) in
             make.left.equalToSuperview().offset(15)
-            //make.right.equalToSuperview().offset(-15)
             make.right.equalToSuperview().inset(15)
             make.height.equalTo(50)
             make.bottom.equalTo(self).inset(15)
@@ -70,6 +73,13 @@ extension ViewControllerScreen: CodeView {
             make.height.equalTo(200)
             make.centerY.equalToSuperview()
             
+        }
+        
+        headerBox.snp.makeConstraints { (make) in
+            make.top.equalToSuperview().offset(85)
+            make.width.equalTo(gridContainer.snp.width)
+            make.left.equalTo(gridContainer.snp.left)
+            make.height.equalTo(100)
         }
     }
     
